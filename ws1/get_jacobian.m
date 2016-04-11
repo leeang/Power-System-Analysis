@@ -19,8 +19,8 @@ Y(3, 1) = -y13;
 Y(3, 2) = -y23;
 Y(3, 3) = y13 + y23;
 
-G = real(Y);
-B = imag(Y);
+G = real(Y);	% conductance
+B = imag(Y);	% susceptance
 
 %% conditions
 P_G2 = 2;
@@ -43,7 +43,7 @@ S_D2 = 0.5 + 0.25j;
 S_D3 = 4 + 2.5j;
 
 %% find Jacobian matrix
-% creating symbolic variables
+% create symbolic variables
 syms V_3 delta_2 delta_3;
 
 % P_2

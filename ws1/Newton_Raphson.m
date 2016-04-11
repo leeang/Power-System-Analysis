@@ -19,8 +19,8 @@ Y(3, 1) = -y13;
 Y(3, 2) = -y23;
 Y(3, 3) = y13 + y23;
 
-G = real(Y);
-B = imag(Y);
+G = real(Y);	% conductance
+B = imag(Y);	% susceptance
 
 %% conditions
 P_G2 = 2;
