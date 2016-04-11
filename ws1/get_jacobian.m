@@ -1,7 +1,6 @@
 clear;
 
-syms V_3 delta_2 delta_3;
-
+%% admittance
 y12 = (0.01 + 0.03j)^-1;
 y13 = (0.02 + 0.04j)^-1;
 y23 = (0.0125 + 0.025j)^-1;
@@ -23,6 +22,7 @@ Y(3, 3) = y13 + y23;
 G = real(Y);
 B = imag(Y);
 
+%% conditions
 P_G2 = 2;
 P_D2 = 0.5;
 P_2 = P_G2 - P_D2;
@@ -41,6 +41,10 @@ V_2 = 1.04;
 S_D1 = 0.8 + 0.3j;
 S_D2 = 0.5 + 0.25j;
 S_D3 = 4 + 2.5j;
+
+%% find Jacobian matrix
+% creating symbolic variables
+syms V_3 delta_2 delta_3;
 
 % P_2
 f1 = V_2 * V_1 * ( G(2, 1) * cos(delta_2-delta_1) + B(2, 1) * sin(delta_2-delta_1) ) + ...
