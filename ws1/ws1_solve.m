@@ -1,5 +1,3 @@
-clear;
-
 syms V_3 delta_2 delta_3;
 
 eqn1 = '1.5 = 17.22 + 32.76 * delta_2 - 16.64 * V_3 + 33.28 * V_3 * (delta_2 - delta_3)';
