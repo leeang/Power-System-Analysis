@@ -47,8 +47,13 @@ V_3 = 1;
 delta_2 = 0;
 delta_3 = 0;
 
+f = ones(3, 1);
+iteration_num = 0;
+
+TOLERANCE = 1E-9;
+
 % iteration
-for index = 1:100
+while norm(f) > TOLERANCE
 	% P_2
 	f1 = V_2 * V_1 * ( G(2, 1) * cos(delta_2-delta_1) + B(2, 1) * sin(delta_2-delta_1) ) + ...
 	V_2 * V_2 * ( G(2, 2) * cos(delta_2-delta_2) + B(2, 2) * sin(delta_2-delta_2) ) + ...
@@ -79,6 +84,8 @@ for index = 1:100
 	V_3 = x_1(1);
 	delta_2 = x_1(2);
 	delta_3 = x_1(3);
+
+	iteration_num = iteration_num + 1;
 end
 
 V_2 = V_2 * exp(1j * delta_2);
@@ -90,6 +97,9 @@ S_2 = V_2 * conj(Y(2, 1) * V_1 + Y(2, 2) * V_2 + Y(2, 3) * V_3);
 S_G1 = S_1 + S_D1;
 S_G2 = S_2 + S_D2;
 
+fprintf('precision tolerance: %e\n', TOLERANCE);
+fprintf('%d iterations to converge\n', iteration_num);
+fprintf('\n');
 fprintf('V_3: %f\n', V_3);
 fprintf('\n');
 fprintf('S_G1: %f + j%f\n', real(S_G1), imag(S_G1));
