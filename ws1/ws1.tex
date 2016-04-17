@@ -115,6 +115,28 @@
 \newpage
 
 %----------------------------------------------------------------------------------------
+%	Newton Raphson
+%----------------------------------------------------------------------------------------
+
+\section*{Task 1\_B}
+\textit{The MATLAB program is available in the appendix.}\\
+
+Given the precision tolerance $10^{-9}$, results converged after 5 iterations.\\
+
+\textbf{Result}
+\begin{lstlisting}[language={}]
+precision tolerance: 1.000000e-09
+5 iterations to converge
+
+V_3: 0.970230
+delta_2: -1.131752 deg
+delta_3: -3.084723 deg
+
+S_G1: 3.489790 + j1.531873
+S_G2: 2.000000 + j1.902967
+\end{lstlisting}
+
+%----------------------------------------------------------------------------------------
 %	Hand calculation
 %----------------------------------------------------------------------------------------
 
@@ -223,17 +245,6 @@ Equations are derived from \texttt{get\_jacobian.m}.
 \newpage
 \subsection*{Newton\_Raphson.m}
 \lstinputlisting{Newton_Raphson.m}
-
-\subsubsection*{Result}
-\begin{lstlisting}[language={}]
-V_3: 0.970230
-
-S_G1: 3.489790 + j1.531873
-S_G2: 2.000000 + j1.902967
-
-delta_2: -1.131752 deg
-delta_3: -3.084723 deg
-\end{lstlisting}
 
 %----------------------------------------------------------------------------------------
 
