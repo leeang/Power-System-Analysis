@@ -1,6 +1,3 @@
-clear;
-clc;
-
 VA_b = 100E6;
 V_b = 15E3;
 
