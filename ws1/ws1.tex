@@ -146,7 +146,7 @@ S_G2: 2.000000 + j1.902967
 Y_{bus} &= 
 \begin{bmatrix}
 \frac{1}{0.01+0.03j} + \frac{1}{0.02+0.04j} &-\frac{1}{0.01+0.03j} &-\frac{1}{0.02+0.04j}\\
-\frac{1}{0.01+0.03j} &\frac{1}{0.01+0.03j} + \frac{1}{0.0125+0.025j} &-\frac{1}{0.0125+0.025j}\\
+-\frac{1}{0.01+0.03j} &\frac{1}{0.01+0.03j} + \frac{1}{0.0125+0.025j} &-\frac{1}{0.0125+0.025j}\\
 -\frac{1}{0.02+0.04j} &-\frac{1}{0.0125+0.025j} &\frac{1}{0.02+0.04j} + \frac{1}{0.0125+0.025j}
 \end{bmatrix}\\
 &=
@@ -205,7 +205,7 @@ Q_3 &= Q_{G3} - Q_{D3}\\
 \Longrightarrow -2.5 = -10.5 |V_3| \delta_3 - 54.28 |V_3| - 16.64 |V_3| (\delta_3 - \delta_2) + 52 |V_3|^2
 \end{equation}
 
-\texttt{solve} equation (\ref{P2}), (\ref{P3}) and (\ref{Q3}) in MATLAB
+\texttt{solve} equation (\ref{P2}), (\ref{P3}) and (\ref{Q3}) in MATLAB (\textit{code can be found in appendix})
 \begin{align*}
 \delta_2 = -1.12^{\circ}\\
 \delta_3 = -3.07^{\circ}\\
@@ -232,6 +232,10 @@ S_{G2} &= S_{D2} + S_2 = 2 + 1.855 \text{ pu}
 
 \newpage
 \section*{Appendix}
+
+\subsection*{ws1\_solve.m}
+Solve the equations obtained in hand calculation part in MATLAB.
+\lstinputlisting{ws1_solve.m}
 
 \subsection*{get\_jacobian.m}
 Get the representation of Jacobian matrix in terms of $V_3$, $\delta_2$ and $\delta_3$.
