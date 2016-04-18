@@ -8,7 +8,10 @@ function V_2 = solve_eq3(P_D, beta)
 	Y_line = abs(Y_line);
 
 	syms V_2 positive;
-	eqn = V_2^4 * Y_line^2 + V_2^2 * (2 * P_D * (G_line - beta * B_line) - Y_line^2 * V_1^2) - P_D^2 * (1+beta^2) == 0;
+	% |V_2| is positive
+	eqn = V_2^4 * Y_line^2 + V_2^2 * (2 * P_D * (G_line - beta * B_line) - Y_line^2 * V_1^2) + P_D^2 * (1+beta^2) == 0;
 	V_2 = solve(eqn, 'Real', true);
+	% |V_2| is real
 	V_2 = double(V_2);
+	V_2 = sort(V_2);
 end
