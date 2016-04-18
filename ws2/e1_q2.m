@@ -9,8 +9,8 @@ while P*lambda <= 0.98
 	P_vector(index) = P * lambda;
 	V(:, index) = solve_eq3(P_vector(index), BETA);
 
-    lambda = lambda + 0.1;
-    index = index + 1;
+	lambda = lambda + 0.1;
+	index = index + 1;
 end
 
 P_vector(index) = 0.9801999;
