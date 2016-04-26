@@ -4,8 +4,11 @@ lambda = 4;
 BETA = 0;
 P = 0.1;
 
+P_D_cr = 0.98019998;
+P_D_cr = 0.49498825;
+
 index = 1;
-while P*lambda <= 0.98
+while P*lambda <= P_D_cr
 	P_vector(index) = P * lambda;
 	V(:, index) = solve_eq3(P_vector(index), BETA);
 
@@ -13,8 +16,8 @@ while P*lambda <= 0.98
 	index = index + 1;
 end
 
-P_vector(index) = 0.98019998;
-V(:, index) = solve_eq3(P_vector(index), 0);
+P_vector(index) = P_D_cr;
+V(:, index) = solve_eq3(P_vector(index), BETA);
 
 plot(P_vector, V);
 xlabel('P (pu)');
