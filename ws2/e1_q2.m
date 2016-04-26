@@ -13,7 +13,7 @@ while P*lambda <= 0.98
 	index = index + 1;
 end
 
-P_vector(index) = 0.9801999;
+P_vector(index) = 0.98019998;
 V(:, index) = solve_eq3(P_vector(index), 0);
 
 plot(P_vector, V);
