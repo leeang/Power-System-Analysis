@@ -22,3 +22,4 @@ plot(P_vector, V);
 xlabel('P (pu)');
 ylabel('V (pu)');
 title('P-V curve (pf = 0)');
+grid on;
