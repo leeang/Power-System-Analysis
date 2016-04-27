@@ -1,6 +1,6 @@
 clear;
 
-lambda = 4;
+lambda = 1;
 pf = 0.8;
 BETA = sqrt(1 - pf^2) / pf;
 P = 0.1;

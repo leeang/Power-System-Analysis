@@ -1,6 +1,6 @@
 clear;
 
-lambda = 4;
+lambda = 1;
 BETA = 0;
 P = 0.1;
 
