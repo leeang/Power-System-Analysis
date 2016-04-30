@@ -13,5 +13,5 @@ function V_2 = solve_eq3(P_D, beta)
 	V_2 = solve(eqn, 'Real', true);
 	% |V_2| is real
 	V_2 = double(V_2);
-	V_2 = sort(V_2);
+	V_2 = sort(V_2, 'descend');
 end

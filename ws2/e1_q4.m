@@ -19,8 +19,11 @@ end
 P_vector(index) = P_D_cr;
 V(:, index) = solve_eq3(P_vector(index), BETA);
 
+save('e1_q4', 'P_vector', 'V');
+
 plot(P_vector, V);
 xlabel('P (pu)');
 ylabel('V (pu)');
 title('P-V curve (pf = 0.8 lagging)');
+legend('stable', 'unstable');
 grid on;

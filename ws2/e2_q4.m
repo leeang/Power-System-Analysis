@@ -12,3 +12,4 @@ plot(beta_vector, V);
 xlabel('\beta');
 ylabel('V (pu)');
 title('\beta - V');
+grid on;
