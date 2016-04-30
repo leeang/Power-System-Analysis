@@ -372,6 +372,18 @@ Results can be considered consistent with each other.
 \subsection*{4.}
 \begin{figure}[H]
 \centering
+\includegraphics[width=0.8\linewidth]{e2_q4_simulink}
+\caption{Simulink diagram}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{e2_q4_result}
+\caption{Simulink results}
+\end{figure}
+
+\begin{figure}[H]
+\centering
 \includegraphics[width=0.5\linewidth]{e2_q4}
 \caption{$\beta$ - $V$ curve}
 \end{figure}
@@ -379,7 +391,7 @@ Results can be considered consistent with each other.
 By using Eq. \ref{eq3} and set $P_D$ as constant value-16MW (16/50 pu). Then we can plot the curve which represents the relationship between $|V_2|$ and $\beta$. Since $|V_2|$ is brought to within $\pm$ 0.02 pu, the maximum $\beta$ is 0.0202. Then we can calculate the power factor of the load. By using power triangle, the compensated reactive power was calculated.
 
 \subsection*{5.}
-It can be read from Fig. \ref{e2_q1} that $|V_2|$ = 0.8343 pu and $P_D$ = 0.32 pu. Thus, $Q_D = P_D \frac{-\sqrt{1 - pf^2}}{pf} = -0.24$ pu.
+It can be read from Fig. \ref{e2_q1} that $|V_2|$ = 1.096 pu and $P_D$ = 0.32 pu. Thus, $Q_D = P_D \frac{-\sqrt{1 - pf^2}}{pf} = -0.24$ pu.
 
 \begin{tabu} to \textwidth {XXX}
 \toprule
@@ -407,6 +419,7 @@ Furthermore, from the combined P-V curve we can clearly see that the curve with 
 
 \section*{Appendix}
 
+\newpage
 \subsection*{Experiment 1 Task 1}
 \lstinputlisting{solve_eq3.m}
 
