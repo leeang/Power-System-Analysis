@@ -158,7 +158,7 @@ For known $\beta$, Eq. \ref{eq1} can be sovled.
 \begin{align*}
 P_{D_{cr}} =
 \begin{cases}
-0.9801999800 \text{ pu} &pf = 0\\
+0.9801999800 \text{ pu} &pf = 1\\
 0.4949882502 \text{ pu} &pf = 0.8 \text{ lagging}\\
 1.9221529035 \text{ pu} &pf = 0.8 \text{ leading}
 \end{cases}
@@ -171,7 +171,7 @@ Evaluate $|V_{2_{cr}}|$ via Eq. \ref{eq2}
 \begin{align*}
 |V_{2_{cr}}| =
 \begin{cases}
-0.700141 \text{ pu} &pf = 0\\
+0.700141 \text{ pu} &pf = 1\\
 0.556264 \text{ pu} &pf = 0.8 \text{ lagging}\\
 1.096169 \text{ pu} &pf = 0.8 \text{ leading}
 \end{cases}
@@ -197,7 +197,7 @@ Eq. \ref{eq3} can be solved
 |V_2| =
 \begin{cases}
 0.9746 \text{ pu}\\
-0.2053 \text{ pu}
+0.2053 \text{ pu (unstable)}
 \end{cases}
 \end{align*}
 
@@ -213,7 +213,7 @@ Eq. \ref{eq3} can be solved
 |V_2| =
 \begin{cases}
 0.8343 \text{ pu}\\
-0.2398 \text{ pu}
+0.2398 \text{ pu (unstable)}
 \end{cases}
 \end{align*}
 
@@ -229,7 +229,7 @@ Eq. \ref{eq3} can be solved
 |V_2| =
 \begin{cases}
 1.0956 \text{ pu}\\
-0.1826 \text{ pu}
+0.1826 \text{ pu (unstable)}
 \end{cases}
 \end{align*}
 
@@ -243,21 +243,49 @@ Eq. \ref{eq3} can be solved
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\linewidth]{e1_q2}
-\caption{$P$ - $V$ curve when $pf$ = 0}
+\caption{$P$ - $V$ curve ($pf$ = 1)}
 \end{figure}
 
 \subsection*{4.}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\linewidth]{e1_q4}
-\caption{$P$ - $V$ curve when $pf$ = 0.8 lagging}
+\caption{$P$ - $V$ curve ($pf$ = 0.8 lagging)}
 \end{figure}
 
 \subsection*{5.}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\linewidth]{e1_q5}
-\caption{$P$ - $V$ curve when $pf$ = 0.8 leading}
+\caption{$P$ - $V$ curve ($pf$ = 0.8 leading)}
+\end{figure}
+
+\subsection*{6.}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{e1_q6}
+\caption{Simulink diagram}
+\end{figure}
+
+\subsection*{7.}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{e1_q7}
+\caption{Simulink results ($pf$ = 1)}
+\end{figure}
+
+\subsection*{8.}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{e1_q8}
+\caption{Simulink results ($pf$ = 0.8 lagging)}
+\end{figure}
+
+\subsection*{9.}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{e1_q9}
+\caption{Simulink results ($pf$ = 0.8 leading)}
 \end{figure}
 
 %----------------------------------------------------------------------------------------
@@ -266,12 +294,26 @@ Eq. \ref{eq3} can be solved
 
 \section*{Experiment 2}
 
+\subsection*{1.}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\linewidth]{e2_q1}
+\caption{$P$ - $V$ curves}
+\end{figure}
+
 \subsection*{4.}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\linewidth]{e2_q4}
 \caption{$\beta$ - $V$ curve}
 \end{figure}
+
+By using Eq. \ref{eq3} and set $P_D$ as constant value-16MW (16/50 pu). Then we can plot the curve which represents the relationship between $|V_2|$ and $\beta$. Since $|V_2|$ is brought to within $\pm$ pu, the maximum $\beta$ is 0.02. Then we can calculate the power factor of the load. By using power triangle, the compensated reactive power was calculated.
+
+\subsection*{6.}
+As we concluded in the table above, it can be seen that the P-V curve has the highest accuracy. The pre workshop result are identical with a slight difference because of the precision in the calculation process.\\
+
+Furthermore, from the combined P-V curve we can clearly see that the curve with unit power factor is outside of the curve with lagging power factor. Therefore, the Bus 2 voltage in the unit power factor circuit will keep more stable around 1 pu than the lagging power factor circuit when the load complex power was varied.
 
 %----------------------------------------------------------------------------------------
 
