@@ -84,6 +84,10 @@
 \definecolor{subsubsectioncolor}{RGB}{0,51,102}
 \subsubsectionfont{\color{subsubsectioncolor}\sffamily}
 
+% table
+\usepackage{tabu}
+\usepackage{booktabs}
+
 % Margins
 \topmargin=-0.45in
 \evensidemargin=-0.3in
@@ -239,6 +243,17 @@ Eq. \ref{eq3} can be solved
 
 \section*{Experiment 1}
 
+\subsection*{1.}
+We write a function \texttt{V\_2 = solve\_eq3(P\_D, beta)} to solve Eq. \ref{eq3}.\\
+
+\begin{tabu} to \textwidth {XXXX}
+\toprule
+$pf$ &0 &0.8 lagging &0.8 leading\\
+\hline
+$|V_2|$ &0.974614 pu &0.834335 pu &1.095564pu\\
+\bottomrule
+\end{tabu}
+
 \subsection*{2. \& 3.}
 \begin{figure}[H]
 \centering
@@ -274,6 +289,17 @@ Eq. \ref{eq3} can be solved
 \caption{Simulink results ($pf$ = 1)}
 \end{figure}
 
+\begin{tabu} to \textwidth {XXX}
+\toprule
+&MATLAB &Simulink\\
+\hline
+$|V_2|$ &0.974614 pu &0.9749 pu\\
+\bottomrule
+\end{tabu}
+
+\vspace{9pt}
+Results can be considered consistent with each other.
+
 \subsection*{8.}
 \begin{figure}[H]
 \centering
@@ -281,12 +307,34 @@ Eq. \ref{eq3} can be solved
 \caption{Simulink results ($pf$ = 0.8 lagging)}
 \end{figure}
 
+\begin{tabu} to \textwidth {XXX}
+\toprule
+&MATLAB &Simulink\\
+\hline
+$|V_2|$ &0.834335 pu &0.8347 pu\\
+\bottomrule
+\end{tabu}
+
+\vspace{9pt}
+Results can be considered consistent with each other.
+
 \subsection*{9.}
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{e1_q9}
 \caption{Simulink results ($pf$ = 0.8 leading)}
 \end{figure}
+
+\begin{tabu} to \textwidth {XXX}
+\toprule
+&MATLAB &Simulink\\
+\hline
+$|V_2|$ &1.095564 pu &1.0957 pu\\
+\bottomrule
+\end{tabu}
+
+\vspace{9pt}
+Results can be considered consistent with each other.
 
 %----------------------------------------------------------------------------------------
 %	Experiment 2
@@ -299,7 +347,26 @@ Eq. \ref{eq3} can be solved
 \centering
 \includegraphics[width=0.6\linewidth]{e2_q1}
 \caption{$P$ - $V$ curves}
+\label{e2_q1}
 \end{figure}
+
+\subsection*{3.}
+It can be read from Fig. \ref{e2_q1} that $|V_2|$ = 0.8343 pu and $P_D$ = 0.32 pu. Thus, $Q_D = P_D \frac{\sqrt{1 - pf^2}}{pf} = 0.24$ pu.
+
+\begin{tabu} to \textwidth {XXX}
+\toprule
+&$P$ - $V$ curve &Pre workshop\\
+\hline
+$|V_2|$ &0.8343 pu &0.8343 pu\\
+\hline
+$P_D$ &0.32 pu &0.32 pu\\
+\hline
+$Q_D$ &0.24 pu &0.24 pu\\
+\bottomrule
+\end{tabu}
+
+\vspace{9pt}
+Results can be considered consistent with each other.
 
 \subsection*{4.}
 \begin{figure}[H]
@@ -309,6 +376,24 @@ Eq. \ref{eq3} can be solved
 \end{figure}
 
 By using Eq. \ref{eq3} and set $P_D$ as constant value-16MW (16/50 pu). Then we can plot the curve which represents the relationship between $|V_2|$ and $\beta$. Since $|V_2|$ is brought to within $\pm$ pu, the maximum $\beta$ is 0.02. Then we can calculate the power factor of the load. By using power triangle, the compensated reactive power was calculated.
+
+\subsection*{5.}
+It can be read from Fig. \ref{e2_q1} that $|V_2|$ = 0.8343 pu and $P_D$ = 0.32 pu. Thus, $Q_D = P_D \frac{-\sqrt{1 - pf^2}}{pf} = -0.24$ pu.
+
+\begin{tabu} to \textwidth {XXX}
+\toprule
+&$P$ - $V$ curve &Pre workshop\\
+\hline
+$|V_2|$ &1.096 pu &1.0956 pu\\
+\hline
+$P_D$ &0.32 pu &0.32 pu\\
+\hline
+$Q_D$ &-0.24 pu &-0.24 pu\\
+\bottomrule
+\end{tabu}
+
+\vspace{9pt}
+Results can be considered consistent with each other.
 
 \subsection*{6.}
 As we concluded in the table above, it can be seen that the P-V curve has the highest accuracy. The pre workshop result are identical with a slight difference because of the precision in the calculation process.\\
