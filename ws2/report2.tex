@@ -51,6 +51,7 @@
 \definecolor{stringColor}{RGB}{160,32,240}
 \usepackage{listings}
 \lstset{
+	inputpath=\hmwkCodePath,
 	language=Matlab,
 	basicstyle=\footnotesize\ttfamily,
 	keywordstyle=\color{blue},
@@ -375,7 +376,7 @@ Results can be considered consistent with each other.
 \caption{$\beta$ - $V$ curve}
 \end{figure}
 
-By using Eq. \ref{eq3} and set $P_D$ as constant value-16MW (16/50 pu). Then we can plot the curve which represents the relationship between $|V_2|$ and $\beta$. Since $|V_2|$ is brought to within $\pm$ pu, the maximum $\beta$ is 0.02. Then we can calculate the power factor of the load. By using power triangle, the compensated reactive power was calculated.
+By using Eq. \ref{eq3} and set $P_D$ as constant value-16MW (16/50 pu). Then we can plot the curve which represents the relationship between $|V_2|$ and $\beta$. Since $|V_2|$ is brought to within $\pm$ 0.02 pu, the maximum $\beta$ is 0.0202. Then we can calculate the power factor of the load. By using power triangle, the compensated reactive power was calculated.
 
 \subsection*{5.}
 It can be read from Fig. \ref{e2_q1} that $|V_2|$ = 0.8343 pu and $P_D$ = 0.32 pu. Thus, $Q_D = P_D \frac{-\sqrt{1 - pf^2}}{pf} = -0.24$ pu.
@@ -399,6 +400,15 @@ Results can be considered consistent with each other.
 As we concluded in the table above, it can be seen that the P-V curve has the highest accuracy. The pre workshop result are identical with a slight difference because of the precision in the calculation process.\\
 
 Furthermore, from the combined P-V curve we can clearly see that the curve with unit power factor is outside of the curve with lagging power factor. Therefore, the Bus 2 voltage in the unit power factor circuit will keep more stable around 1 pu than the lagging power factor circuit when the load complex power was varied.
+
+%----------------------------------------------------------------------------------------
+%	Appendix
+%----------------------------------------------------------------------------------------
+
+\section*{Appendix}
+
+\subsection*{Experiment 1 Task 1}
+\lstinputlisting{solve_eq3.m}
 
 %----------------------------------------------------------------------------------------
 
